@@ -435,7 +435,7 @@ function handleAutoAnswer() {
     scoreDisplayElem.textContent = score.toFixed(2);
 
     // Speak the correct answer and then load the next question when done
-    speak(`সঠিক উত্তর। উত্তরটি হলো, ${correctAnswer}`, () => {
+    speak(correctAnswer, () => {
         setTimeout(() => {
             currentQuestionIndex++;
             loadQuestion();
